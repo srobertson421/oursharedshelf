@@ -5,7 +5,11 @@
         <h1>About Our Shared Shelf</h1>
       </div>
       <div class="overlay-book">
-        <p class="book-text">Dear Readers, <br><br>As part of my work with UN Women, I have started reading as many books and essays about equality as I can get my hands on. There is so much amazing stuff out there! Funny, inspiring, sad, thought-provoking, empowering! I’ve been discovering so much that, at times, I’ve felt like my head was about to explode… I decided to start a Feminist book club, as I want to share what I’m learning and hear your thoughts too. <br><br>The plan is to select and read a book every month, then discuss the work during the month’s last week (to give everyone time to read it!). I will post some questions/quotes to get things started, but I would love for this to grow into an open discussion with and between you all. Whenever possible I hope to have the author, or another prominent voice on the subject, join the conversation.<br><br>If you fancy it, please join up and participate. Everyone is welcome. I would be honoured!<br><br>Emma x</p>
+        {{#if groupDesc}}
+          <div class="book-text">{{{groupDesc}}}</div>
+        {{else}}
+          <p class="book-text">Dear Readers, <br><br>As part of my work with UN Women, I have started reading as many books and essays about equality as I can get my hands on. There is so much amazing stuff out there! Funny, inspiring, sad, thought-provoking, empowering! I’ve been discovering so much that, at times, I’ve felt like my head was about to explode… I decided to start a Feminist book club, as I want to share what I’m learning and hear your thoughts too. <br><br>The plan is to select and read a book every month, then discuss the work during the month’s last week (to give everyone time to read it!). I will post some questions/quotes to get things started, but I would love for this to grow into an open discussion with and between you all. Whenever possible I hope to have the author, or another prominent voice on the subject, join the conversation.<br><br>If you fancy it, please join up and participate. Everyone is welcome. I would be honoured!<br><br>Emma x</p>
+        {{/if}}
       </div>
     </div>
   </div>

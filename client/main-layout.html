@@ -1,11 +1,14 @@
 <template name="main-layout">
 <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Our Shared Shelf</title>
 </head>
 <body>
   {{> navbar}}
   <div class="">
-    <div class="container main-container">
+    <div class="container-fluid main-container">
       {{#transition wrap="true" in="fadeInLeft:500" out="fadeOutLeft:500"}}
         {{> yield}}
       {{/transition}}

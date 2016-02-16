@@ -1,5 +1,5 @@
-var API_KEY = process.env.GOODREADS_KEY;
-var SECRET = process.env.GOODREADS_SECRET;
+var API_KEY = Meteor.settings.goodReads.api_key;
+var SECRET = Meteor.settings.goodReads.secret;
 
 Meteor.methods({
   getMonthlyBook: function() {

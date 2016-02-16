@@ -1,11 +1,9 @@
 Template.home.onCreated(function() {
   if (!Session.get('monthlyBook')) {
     Meteor.call('getMonthlyBook', function(error, result) {
-      console.log(result);
       var currentBook = result.GoodreadsResponse.group[0].currently_reading[0].group_book[0].book[0]
 
       Meteor.call('getBookDesc', currentBook.id[0]._, function(descError, descResult) {
-        console.log(descResult);
         var descBook = descResult.GoodreadsResponse.book[0];
         Session.set('monthlyBook', {
           title: currentBook.title[0],

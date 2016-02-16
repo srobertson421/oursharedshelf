@@ -3,8 +3,12 @@
     <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-12">
       {{#if monthlyBook}}
         <div class="row overlay-title">
-          <h2 class="pull-left" style="margin-right: 20px">Currently Reading:</h2>
-          <h2 class="pull-left">{{monthlyBook.title}} <small style="color: #fff">by {{monthlyBook.author}}</small></h2>
+          <div class="col-lg-6 col-md-6 col-sm-6">
+            <h2 style="margin-right: 20px">Currently Reading:</h2>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-6">
+            <h2>{{monthlyBook.title}} <small style="color: #fff">by {{monthlyBook.author}}</small></h2>
+          </div>
         </div>
         <div class="row overlay-book">
           <div class="col-lg-4 col-md-4 col-sm-4">

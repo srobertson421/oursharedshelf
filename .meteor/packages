@@ -26,3 +26,4 @@ http
 peerlibrary:xml2js
 webtempest:animate
 sacha:spin
+u2622:persistent-session

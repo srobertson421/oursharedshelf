@@ -3,7 +3,7 @@
     <div class="container-fluid">
       <!-- Brand and toggle get grouped for better mobile display -->
       <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-nav" aria-expanded="false">
           <span class="sr-only">Toggle navigation</span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
@@ -16,10 +16,13 @@
       </div>
 
       <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <div class="collapse navbar-collapse" id="main-nav">
         <ul class="nav navbar-nav">
-          <li><a href="/about">About</a></li>
-          <li><a href="/discussion-board">Discussion Board</a></li>
+          <li><a href="/about" data-toggle="collapse" data-target=".navbar-collapse">About</a></li>
+          <li><a href="/discussion-board" data-toggle="collapse" data-target=".navbar-collapse">Discussion Board</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          {{> loginButtons}}
         </ul>
         <form class="navbar-form navbar-right" role="search">
           <div class="form-group">
@@ -27,9 +30,6 @@
           </div>
           <button type="submit" class="btn btn-default">Search</button>
         </form>
-        <ul class="nav navbar-nav navbar-right">
-          {{> loginButtons}}
-        </ul>
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
   </nav>
