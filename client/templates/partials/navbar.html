@@ -9,6 +9,9 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
+        {{#if previousUrl}}
+          <a class="navbar-brand" style="padding:8px;" href="{{previousUrl}}"><button class="btn btn-primary">Back</button></a>
+        {{/if}}
         <a class="navbar-brand" href="/">
           Our Shared Shelf
           <!-- <img alt="Brand" src="images/brand_small.jpg" class="center-block"> -->
@@ -19,7 +22,7 @@
       <div class="collapse navbar-collapse" id="main-nav">
         <ul class="nav navbar-nav">
           <li><a href="/about" data-toggle="collapse" data-target=".navbar-collapse">About</a></li>
-          <li><a href="/discussion-board" data-toggle="collapse" data-target=".navbar-collapse">Discussion Board</a></li>
+          <li><a href="/discussions" data-toggle="collapse" data-target=".navbar-collapse">Discussion Board</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
           {{> loginButtons}}

@@ -1,6 +1,6 @@
-Template.home.onCreated(function() {
-  Session.set('previousUrl', '');
-  Session.set('currentUrl', '/');
+Template.discussionBoard.onCreated(function() {
+  Session.set('previousUrl', Session.get('currentUrl'));
+  Session.set('currentUrl', '/discussions');
 
   if (!Session.get('monthlyBook')) {
     Meteor.call('getMonthlyBook', function(error, result) {
@@ -27,18 +27,14 @@ Template.home.onCreated(function() {
   }
 });
 
-Template.home.helpers({
+Template.discussionBoard.helpers({
   isLoaded: function() {
     return Session.get('isLoaded');
   },
 
-  currentPage: function() {
-    if(Session.get('isLoaded')) {
-      return 'currentBook';
-    } else {
-      return 'loading';
+  monthlyBook: function() {
+    if (Session.get('monthlyBook')) {
+      return Session.get('monthlyBook');
     }
   }
 });
-
-Template.home.events({});

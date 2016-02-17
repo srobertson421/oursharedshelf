@@ -1,0 +1,18 @@
+<template name="discussionBoard">
+  {{#if isLoaded}}
+    <div class="row">
+      <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-12">
+        <div class="overlay-title">
+          <h1>Discussion Boards</h1>
+        </div>
+        <div class="overlay-book">
+          {{#each monthlyBook.discussionBoards}}
+            <p>{{{name}}}</p>
+          {{/each}}
+        </div>
+      </div>
+    </div>
+  {{else}}
+    {{> loading}}
+  {{/if}}
+</template>
